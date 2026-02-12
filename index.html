@@ -41,20 +41,29 @@
         "latitude": -33.8688,
         "longitude": 151.2093
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "07:00",
-        "closes": "19:00"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "16:00"
+        }
+      ],
       "sameAs": [
         "https://hygienexperts.com.au/"
       ],
@@ -269,6 +278,82 @@
         </div>
     </section>
 
+    <!-- Gallery Showcase Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Our Work</span>
+                <h2>Professional Cleaning Results Sydney</h2>
+                <p>See the difference professional cleaning makes across Sydney homes and businesses</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/commercial-cleaning-sydney.jpg" alt="Commercial Cleaning Sydney - Professional office cleaning services in Sydney CBD" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Commercial Cleaning Sydney</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="images/office-cleaning-sydney.jpg" alt="Office Cleaning Sydney - Modern workspace deep cleaning services" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Office Cleaning Services</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="images/residential-cleaning-sydney.jpg" alt="Residential Cleaning Sydney - House cleaning services across Sydney suburbs" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Residential Cleaning</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="images/carpet-steam-cleaning.jpg" alt="Carpet Steam Cleaning Sydney - Professional carpet cleaner Sydney services" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Carpet Steam Cleaning</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="images/end-of-lease-cleaning.jpg" alt="End of Lease Cleaning Sydney - Bond cleaning for guaranteed bond return" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>End of Lease Cleaning</h3>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="images/rangehood-cleaning.jpg" alt="Rangehood Cleaning Sydney - Restaurant kitchen cleaning services" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Rangehood Cleaning</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="before-after-section">
+                <h3 class="before-after-title">Before & After Transformations</h3>
+                
+                <div class="before-after-grid">
+                    <div class="before-after-item">
+                        <img src="images/before-after-carpet-new.jpg" alt="Before After Carpet Cleaning Sydney - Professional carpet steam cleaning results" loading="lazy">
+                        <p class="before-after-caption">Professional Carpet Steam Cleaning</p>
+                    </div>
+                    
+                    <div class="before-after-item">
+                        <img src="images/before-after-office-new.jpg" alt="Before After Office Cleaning Sydney - Commercial office deep cleaning transformation" loading="lazy">
+                        <p class="before-after-caption">Office Deep Cleaning Transformation</p>
+                    </div>
+                    
+                    <div class="before-after-item">
+                        <img src="images/before-after-kitchen-new.jpg" alt="Before After Kitchen Cleaning Sydney - Restaurant rangehood cleaning services" loading="lazy">
+                        <p class="before-after-caption">Restaurant Kitchen Cleaning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Choose Us Section -->
     <section id="why-choose-us" class="why-section">
         <div class="container">
@@ -398,12 +483,12 @@
                 <div class="areas-map">
                     <div class="map-placeholder">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 400 400">
-                            <circle cx="200" cy="200" r="150" fill="#0066cc" opacity="0.1"/>
-                            <circle cx="200" cy="200" r="100" fill="#0066cc" opacity="0.2"/>
-                            <circle cx="200" cy="200" r="50" fill="#0066cc" opacity="0.3"/>
-                            <circle cx="200" cy="200" r="10" fill="#0066cc"/>
-                            <text x="200" y="210" text-anchor="middle" fill="#0066cc" font-size="16" font-weight="bold">Sydney CBD</text>
-                            <text x="200" y="340" text-anchor="middle" fill="#333" font-size="14">50km Service Radius</text>
+                            <circle cx="200" cy="200" r="150" fill="#CD853F" opacity="0.1"/>
+                            <circle cx="200" cy="200" r="100" fill="#CD853F" opacity="0.2"/>
+                            <circle cx="200" cy="200" r="50" fill="#CD853F" opacity="0.3"/>
+                            <circle cx="200" cy="200" r="10" fill="#CD853F"/>
+                            <text x="200" y="210" text-anchor="middle" fill="#8B4513" font-size="16" font-weight="bold">Sydney CBD</text>
+                            <text x="200" y="340" text-anchor="middle" fill="#3D2B1F" font-size="14">50km Service Radius</text>
                         </svg>
                     </div>
                     <div class="coverage-stats">
@@ -540,7 +625,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         <div>
                             <strong>Hours</strong>
-                            <span>Mon-Sun: 7:00 AM - 7:00 PM</span>
+                            <span>Mon–Fri: 8:00 AM – 9:00 PM</span>
+                            <span>Sat–Sun: 9:00 AM – 4:00 PM</span>
                         </div>
                     </div>
                     
@@ -661,7 +747,7 @@
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                            <span>Mon-Sun: 7AM - 7PM</span>
+                            <span>Mon–Fri: 8:00 AM – 9:00 PM | Sat–Sun: 9:00 AM – 4:00 PM</span>
                         </li>
                     </ul>
                 </div>

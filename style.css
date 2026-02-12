@@ -5,22 +5,28 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #0066cc;
-    --primary-dark: #004d99;
-    --primary-light: #3385d6;
-    --secondary-color: #00cc99;
-    --text-dark: #1a1a1a;
-    --text-light: #666666;
-    --text-muted: #999999;
-    --bg-light: #f8f9fa;
-    --bg-white: #ffffff;
-    --border-color: #e0e0e0;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+    /* Warm Premium Palette */
+    --primary-color: #CD853F;        /* Peru - Rich warm brown */
+    --primary-dark: #8B4513;         /* SaddleBrown - Deep chocolate brown */
+    --primary-light: #DEB887;        /* BurlyWood - Light warm brown */
+    --secondary-color: #DAA520;      /* Goldenrod - Premium gold accent */
+    --text-dark: #3D2B1F;           /* Very dark brown */
+    --text-light: #6B5D4F;          /* Medium warm gray-brown */
+    --text-muted: #9B8B7E;          /* Light warm gray */
+    --bg-light: #FFF8F0;            /* Very light warm cream */
+    --bg-white: #FFFAF5;            /* Warm white */
+    --bg-beige: #FFE4C4;            /* Bisque - soft beige */
+    --bg-wheat: #F5DEB3;            /* Wheat - light tan */
+    --border-color: #D2B48C;        /* Tan - warm border */
+    --shadow-sm: 0 2px 8px rgba(139, 69, 19, 0.12);
+    --shadow-md: 0 4px 16px rgba(139, 69, 19, 0.15);
+    --shadow-lg: 0 8px 32px rgba(139, 69, 19, 0.20);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --font-primary: 'Poppins', sans-serif;
     --font-display: 'Playfair Display', serif;
+    --accent-sandy: #F4A460;        /* SandyBrown */
+    --accent-rosybrown: #BC8F8F;    /* RosyBrown */
+    --accent-darkgoldenrod: #B8860B; /* DarkGoldenrod */
 }
 
 /* Reset & Base Styles */
@@ -142,13 +148,13 @@ ul {
     font-weight: 600;
     font-size: 0.95rem;
     transition: var(--transition);
-    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 4px 12px rgba(205, 133, 63, 0.3);
 }
 
 .header-cta:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+    box-shadow: 0 6px 16px rgba(205, 133, 63, 0.4);
 }
 
 .mobile-menu-toggle {
@@ -175,7 +181,7 @@ ul {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+    background: linear-gradient(135deg, #CD853F 0%, #8B4513 100%);
     overflow: hidden;
     padding-top: 80px;
 }
@@ -198,7 +204,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.92) 0%, rgba(0, 77, 153, 0.88) 100%);
+    background: linear-gradient(135deg, rgba(205, 133, 63, 0.92) 0%, rgba(139, 69, 19, 0.88) 100%);
     z-index: 1;
 }
 
@@ -548,13 +554,113 @@ section {
 
 /* Before & After Section */
 .before-after-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
 }
 
 .before-after-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background: var(--bg-white);
+    padding: 100px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    height: 400px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(61, 43, 31, 0.95), transparent);
+    padding: 30px;
+    color: white;
+    transform: translateY(60px);
+    transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    font-family: var(--font-display);
+}
+
+.before-after-title {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    color: var(--text-dark);
+    margin-bottom: 50px;
+}
+
+.before-after-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.before-after-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.before-after-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.before-after-caption {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 20px;
+    background: var(--bg-light);
+    margin: 0;
 }
 
 .ba-card {
@@ -581,7 +687,7 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    background: linear-gradient(to top, rgba(61, 43, 31, 0.95), transparent);
     padding: 30px;
     color: white;
     transform: translateY(60px);
@@ -944,7 +1050,7 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    box-shadow: 0 0 0 3px rgba(205, 133, 63, 0.15);
 }
 
 .form-group textarea {
@@ -1177,6 +1283,7 @@ section {
     .services-grid,
     .why-grid,
     .before-after-grid,
+    .gallery-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
